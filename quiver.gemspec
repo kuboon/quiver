@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kuboon@trick-with.net"]
   spec.summary       = %q{To manipulate HappenApps Quiver notes.}
 #  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/kuboon/quiver"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
