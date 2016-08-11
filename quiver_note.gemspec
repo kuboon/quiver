@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'quiver/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "quiver"
+  spec.name          = "quiver_note"
   spec.version       = Quiver::VERSION
   spec.authors       = ["kuboon"]
   spec.email         = ["kuboon@trick-with.net"]
