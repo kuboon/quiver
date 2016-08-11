@@ -9,7 +9,7 @@ module Quiver
   end
 end
 
-require 'quiver/version'
+require 'quiver_note/version'
 require 'quiver/config'
 require 'quiver/root'
 require 'quiver/notebook'

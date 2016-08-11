@@ -1,4 +1,4 @@
-# Quiver
+# QuiverNote
 
 Unofficial ruby interface for [HappenApps quiver](happenapps.com/#quiver)
 
@@ -7,7 +7,7 @@ Unofficial ruby interface for [HappenApps quiver](happenapps.com/#quiver)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'quiver'
+gem 'quiver_note'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install quiver
+    $ gem install quiver_note
 
 ## Usage
 
