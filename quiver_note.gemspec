@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'quiver/version'
+require 'quiver_note/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "quiver_note"
   spec.version       = Quiver::VERSION
   spec.authors       = ["kuboon"]
   spec.email         = ["kuboon@trick-with.net"]
-  spec.summary       = %q{Unofficial ruby interface for [HappenApps quiver](happenapps.com/#quiver)}
+  spec.summary       = %q{Unofficial ruby interface for [HappenApps quiver](http://happenapps.com/#quiver)}
 #  spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = "https://github.com/kuboon/quiver"
   spec.license       = "MIT"
