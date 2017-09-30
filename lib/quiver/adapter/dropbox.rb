@@ -1,4 +1,5 @@
-require 'dropbox_sdk'
+if defined? ::DropboxApi
+
 module Quiver
   module Adapter
     class Dropbox
@@ -7,26 +8,26 @@ module Quiver
         @access_key = access_key
       end
       def client
-        @client ||= ::DropboxClient.new(@access_key)
+        @client ||= ::DropboxApi::Client.new(@access_key)
       end
 
       # Don't include this url direct on your site. Use via cdn.
       def image_url(path)
         @@image_url_cache ||= {}
-        @@image_url_cache[path] ||= client.media(normalize_path(path))['url']
+        @@image_url_cache[path] ||= client.get_temporary_link(normalize_path(path))
       end
       def each(path)
-        dir_metadata = client.metadata(normalize_path(path))
+        dir_metadata = client.get_metadata(normalize_path(path))
         dir_metadata['contents'].each do |content|
           next unless content['is_dir']
           yield Pathname.new(content['path'])
         end
       end
       def load(path)
-        client.get_file normalize_path(path)
+        client.download normalize_path(path)
       end
       def save(path, content)
-        client.put_file normalize_path(path), content
+        client.upload normalize_path(path), content
       end
 
       private
@@ -37,3 +38,5 @@ module Quiver
     end
   end
 end
+
+end # ::DropboxApi
