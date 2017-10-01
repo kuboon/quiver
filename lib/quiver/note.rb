@@ -22,7 +22,8 @@ module Quiver
     end
     def content
       @content ||= begin
-        JSON.parse(@adapter.load(@path + 'content.json'))
+        json, meta = @adapter.load(@path + 'content.json')
+        JSON.parse(json)
       end
     end
     def cells
